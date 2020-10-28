@@ -14,6 +14,7 @@
 		122C9552253E1B5F003C6E1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122C9551253E1B5F003C6E1D /* Assets.xcassets */; };
 		122C9555253E1B5F003C6E1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122C9553253E1B5F003C6E1D /* LaunchScreen.storyboard */; };
 		125EA0FC2549F73800D16C5D /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125EA0FB2549F73800D16C5D /* CustomUITextField.swift */; };
+		129DECFD254A203000B0973F /* MyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DECFC254A203000B0973F /* MyDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		122C9554253E1B5F003C6E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		122C9556253E1B5F003C6E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		125EA0FB2549F73800D16C5D /* CustomUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
+		129DECFC254A203000B0973F /* MyDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				122C9551253E1B5F003C6E1D /* Assets.xcassets */,
 				122C9553253E1B5F003C6E1D /* LaunchScreen.storyboard */,
 				122C9556253E1B5F003C6E1D /* Info.plist */,
+				129DECFC254A203000B0973F /* MyDataViewController.swift */,
 			);
 			path = SenibApp;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				122C954D253E1B5C003C6E1D /* ViewController.swift in Sources */,
 				122C9549253E1B5C003C6E1D /* AppDelegate.swift in Sources */,
 				122C954B253E1B5C003C6E1D /* SceneDelegate.swift in Sources */,
+				129DECFD254A203000B0973F /* MyDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
