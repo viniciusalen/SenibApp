@@ -153,7 +153,7 @@
                                 <rect key="frame" x="0.0" y="96" width="375" height="522"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOE-uS-7LD">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="630"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xhC-bi-2uo">
                                                 <rect key="frame" x="16" y="0.0" width="175" height="250"/>
@@ -204,17 +204,23 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r7-ME-kxL">
-                                                                <rect key="frame" x="23" y="72" width="74" height="66"/>
+                                                                <rect key="frame" x="0.0" y="72" width="120" height="66"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                                 <state key="normal" title="Ativo">
                                                                     <color key="titleColor" red="0.53633189199999998" green="0.69770991800000004" blue="0.32933241130000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="tappedActive:" destination="FGf-Bt-gPM" eventType="touchUpInside" id="FxW-h1-m34"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="Dfy-hC-p8q" secondAttribute="trailing" id="2jj-w3-8P5"/>
+                                                            <constraint firstAttribute="trailing" secondItem="1r7-ME-kxL" secondAttribute="trailing" id="9Se-P8-Tke"/>
                                                             <constraint firstAttribute="width" constant="120" id="C2A-Kr-FGB"/>
+                                                            <constraint firstItem="1r7-ME-kxL" firstAttribute="leading" secondItem="rzJ-fm-Z4s" secondAttribute="leading" id="CfJ-S0-3tI"/>
                                                             <constraint firstItem="FkA-DP-8pY" firstAttribute="leading" secondItem="rzJ-fm-Z4s" secondAttribute="leading" constant="10" id="lkc-XR-619"/>
                                                             <constraint firstItem="NEj-mc-Xgh" firstAttribute="leading" secondItem="rzJ-fm-Z4s" secondAttribute="leading" id="oa8-1W-FLi"/>
                                                             <constraint firstAttribute="trailing" secondItem="NEj-mc-Xgh" secondAttribute="trailing" id="p7a-3b-rdz"/>
@@ -248,15 +254,21 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gDB-2Z-td1" userLabel="batizado">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZd-IW-1s6">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZd-IW-1s6">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="24"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="40" id="TI3-oE-KpW"/>
                                                                 </constraints>
                                                                 <color key="tintColor" red="0.53633189199999998" green="0.69770991800000004" blue="0.32933241130000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <state key="normal">
-                                                                    <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="large"/>
+                                                                    <imageReference key="image" image="circle" catalog="system" symbolScale="large"/>
                                                                 </state>
+                                                                <state key="selected">
+                                                                    <imageReference key="image" image="checkmark.circle.fill" catalog="system" symbolScale="large"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="tappedCheck:" destination="FGf-Bt-gPM" eventType="touchUpInside" id="i8I-BW-v6g"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sou batizado" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQj-ra-l4l">
                                                                 <rect key="frame" x="45" y="0.0" width="298" height="24"/>
@@ -269,15 +281,21 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TBQ-7H-rmm" userLabel="ficha de comp">
                                                         <rect key="frame" x="0.0" y="34" width="343" height="42.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rh7-ZD-I3f">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rh7-ZD-I3f">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="42.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="40" id="IDa-RY-9GN"/>
                                                                 </constraints>
                                                                 <color key="tintColor" red="0.53633189199999998" green="0.69770991800000004" blue="0.32933241130000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <state key="normal">
-                                                                    <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="large"/>
+                                                                    <imageReference key="image" image="circle" catalog="system" symbolScale="large"/>
                                                                 </state>
+                                                                <state key="selected">
+                                                                    <imageReference key="image" image="checkmark.circle.fill" catalog="system" symbolScale="large"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="tappedCheckMember:" destination="FGf-Bt-gPM" eventType="touchUpInside" id="nkL-p7-mmK"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Já assinei a ficha de compromisso de membro" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysn-Ri-dQ8">
                                                                 <rect key="frame" x="45" y="0.0" width="298" height="42.5"/>
@@ -341,21 +359,43 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
+                                            <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="RHX-9O-ioM">
+                                                <rect key="frame" x="186" y="571.5" width="173" height="45"/>
+                                                <color key="tintColor" red="0.53633189199999998" green="0.69770991800000004" blue="0.32933241130000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="173" id="75C-99-Mwx"/>
+                                                    <constraint firstAttribute="height" constant="45" id="pQg-fq-uNL"/>
+                                                </constraints>
+                                                <locale key="locale" localeIdentifier="pt_BR"/>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data de nascimento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gad-5d-S66">
+                                                <rect key="frame" x="16" y="571.5" width="165" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="iOk-rK-Sp4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Ulp-I3-W6F" secondAttribute="trailing" constant="16" id="1JW-iC-zF4"/>
                                             <constraint firstItem="bRi-OQ-vZm" firstAttribute="top" secondItem="Ulp-I3-W6F" secondAttribute="bottom" constant="10" id="1ur-Cg-vfL"/>
                                             <constraint firstItem="WVb-Y3-imZ" firstAttribute="top" secondItem="l0L-5R-eun" secondAttribute="bottom" constant="10" id="7KA-zq-TSf"/>
+                                            <constraint firstItem="gad-5d-S66" firstAttribute="leading" secondItem="IOE-uS-7LD" secondAttribute="leading" constant="16" id="7fU-ob-ug7"/>
                                             <constraint firstItem="bRi-OQ-vZm" firstAttribute="leading" secondItem="IOE-uS-7LD" secondAttribute="leading" constant="16" id="8tB-Rd-xUp"/>
                                             <constraint firstAttribute="trailing" secondItem="WVb-Y3-imZ" secondAttribute="trailing" constant="16" id="BVH-m0-Nog"/>
+                                            <constraint firstAttribute="trailing" secondItem="RHX-9O-ioM" secondAttribute="trailing" constant="16" id="CnU-Yn-Isr"/>
                                             <constraint firstItem="l0L-5R-eun" firstAttribute="top" secondItem="xhC-bi-2uo" secondAttribute="bottom" constant="15" id="FbU-WR-2oy"/>
                                             <constraint firstItem="Ulp-I3-W6F" firstAttribute="leading" secondItem="IOE-uS-7LD" secondAttribute="leading" constant="16" id="IdL-ja-8YH"/>
+                                            <constraint firstItem="RHX-9O-ioM" firstAttribute="top" secondItem="5Rr-V7-77t" secondAttribute="bottom" constant="10" id="Ik3-lW-vfu"/>
                                             <constraint firstItem="5Rr-V7-77t" firstAttribute="top" secondItem="bRi-OQ-vZm" secondAttribute="bottom" constant="10" id="L1b-YA-yKi"/>
                                             <constraint firstAttribute="trailing" secondItem="bRi-OQ-vZm" secondAttribute="trailing" constant="16" id="PMZ-rQ-qbi"/>
                                             <constraint firstAttribute="trailing" secondItem="l0L-5R-eun" secondAttribute="trailing" constant="16" id="QG3-d5-zN1"/>
+                                            <constraint firstItem="RHX-9O-ioM" firstAttribute="leading" secondItem="gad-5d-S66" secondAttribute="trailing" constant="5" id="a6t-EZ-gr6"/>
                                             <constraint firstItem="xhC-bi-2uo" firstAttribute="top" secondItem="IOE-uS-7LD" secondAttribute="top" id="arE-Vc-fni"/>
-                                            <constraint firstAttribute="height" constant="900" id="e6u-Ap-ShS"/>
+                                            <constraint firstAttribute="height" constant="630" id="e6u-Ap-ShS"/>
                                             <constraint firstAttribute="trailing" secondItem="5Rr-V7-77t" secondAttribute="trailing" constant="16" id="eRJ-GA-7h7"/>
                                             <constraint firstItem="xhC-bi-2uo" firstAttribute="leading" secondItem="IOE-uS-7LD" secondAttribute="leading" constant="16" id="eXy-yP-awg"/>
                                             <constraint firstAttribute="trailing" secondItem="FHx-M5-49a" secondAttribute="trailing" constant="30" id="jMB-e4-9eE"/>
@@ -364,6 +404,7 @@
                                             <constraint firstItem="WVb-Y3-imZ" firstAttribute="leading" secondItem="IOE-uS-7LD" secondAttribute="leading" constant="16" id="pNP-T4-CY8"/>
                                             <constraint firstItem="Ulp-I3-W6F" firstAttribute="top" secondItem="WVb-Y3-imZ" secondAttribute="bottom" constant="10" id="sTb-tj-RP4"/>
                                             <constraint firstItem="5Rr-V7-77t" firstAttribute="leading" secondItem="IOE-uS-7LD" secondAttribute="leading" constant="16" id="tFZ-gj-1hR"/>
+                                            <constraint firstItem="gad-5d-S66" firstAttribute="top" secondItem="5Rr-V7-77t" secondAttribute="bottom" constant="10" id="vBf-sA-ran"/>
                                             <constraint firstItem="l0L-5R-eun" firstAttribute="leading" secondItem="IOE-uS-7LD" secondAttribute="leading" constant="16" id="z8C-z4-efU"/>
                                         </constraints>
                                     </view>
@@ -395,7 +436,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activeButton" destination="1r7-ME-kxL" id="CP4-3o-k4q"/>
+                        <outlet property="checkBaptism" destination="EZd-IW-1s6" id="jna-LE-0zH"/>
+                        <outlet property="checkMember" destination="rh7-ZD-I3f" id="jgi-bZ-Sdc"/>
+                        <outlet property="datePicker" destination="RHX-9O-ioM" id="eC1-fs-SZ3"/>
                         <outlet property="nameTxtField" destination="WVb-Y3-imZ" id="aRj-bV-193"/>
+                        <outlet property="sexInfoTxtField" destination="5Rr-V7-77t" id="pY8-FX-XRq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmk-Ee-CJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -503,7 +549,8 @@
     <resources>
         <image name="Icone" width="31" height="28"/>
         <image name="Image" width="157" height="137"/>
-        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
         <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
