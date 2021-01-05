@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -150,13 +150,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L88-7C-JjW">
-                                <rect key="frame" x="0.0" y="96" width="375" height="522"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOE-uS-7LD">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="630"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xhC-bi-2uo">
-                                                <rect key="frame" x="16" y="0.0" width="175" height="250"/>
+                                                <rect key="frame" x="16" y="10" width="175" height="250"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="iRs-JE-i0i"/>
@@ -168,7 +168,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHx-M5-49a">
-                                                <rect key="frame" x="221" y="54" width="124" height="142"/>
+                                                <rect key="frame" x="221" y="64" width="124" height="142"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rzJ-fm-Z4s">
                                                         <rect key="frame" x="2" y="2" width="120" height="138"/>
@@ -249,7 +249,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l0L-5R-eun">
-                                                <rect key="frame" x="16" y="265" width="343" height="76.5"/>
+                                                <rect key="frame" x="16" y="275" width="343" height="76.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gDB-2Z-td1" userLabel="batizado">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
@@ -308,7 +308,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="WVb-Y3-imZ" customClass="CustomUITextField" customModule="SenibApp" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="351.5" width="343" height="45"/>
+                                                <rect key="frame" x="16" y="361.5" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="dcE-DK-1cJ"/>
                                                 </constraints>
@@ -321,7 +321,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Ulp-I3-W6F" customClass="CustomUITextField" customModule="SenibApp" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="406.5" width="343" height="45"/>
+                                                <rect key="frame" x="16" y="416.5" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="8R1-CS-qlr"/>
                                                 </constraints>
@@ -334,7 +334,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="bRi-OQ-vZm" customClass="CustomUITextField" customModule="SenibApp" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="461.5" width="343" height="45"/>
+                                                <rect key="frame" x="16" y="471.5" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Bl2-wF-W5T"/>
                                                 </constraints>
@@ -347,7 +347,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sexo" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="5Rr-V7-77t" customClass="CustomUITextField" customModule="SenibApp" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="516.5" width="343" height="45"/>
+                                                <rect key="frame" x="16" y="526.5" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Rfa-Y5-rLc"/>
                                                 </constraints>
@@ -360,7 +360,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="RHX-9O-ioM">
-                                                <rect key="frame" x="186" y="571.5" width="173" height="45"/>
+                                                <rect key="frame" x="186" y="581.5" width="173" height="45"/>
                                                 <color key="tintColor" red="0.53633189199999998" green="0.69770991800000004" blue="0.32933241130000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="173" id="75C-99-Mwx"/>
@@ -369,7 +369,7 @@
                                                 <locale key="locale" localeIdentifier="pt_BR"/>
                                             </datePicker>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data de nascimento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gad-5d-S66">
-                                                <rect key="frame" x="16" y="571.5" width="165" height="45"/>
+                                                <rect key="frame" x="16" y="581.5" width="165" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="iOk-rK-Sp4"/>
                                                 </constraints>
@@ -394,7 +394,7 @@
                                             <constraint firstAttribute="trailing" secondItem="bRi-OQ-vZm" secondAttribute="trailing" constant="16" id="PMZ-rQ-qbi"/>
                                             <constraint firstAttribute="trailing" secondItem="l0L-5R-eun" secondAttribute="trailing" constant="16" id="QG3-d5-zN1"/>
                                             <constraint firstItem="RHX-9O-ioM" firstAttribute="leading" secondItem="gad-5d-S66" secondAttribute="trailing" constant="5" id="a6t-EZ-gr6"/>
-                                            <constraint firstItem="xhC-bi-2uo" firstAttribute="top" secondItem="IOE-uS-7LD" secondAttribute="top" id="arE-Vc-fni"/>
+                                            <constraint firstItem="xhC-bi-2uo" firstAttribute="top" secondItem="IOE-uS-7LD" secondAttribute="top" constant="10" id="arE-Vc-fni"/>
                                             <constraint firstAttribute="height" constant="630" id="e6u-Ap-ShS"/>
                                             <constraint firstAttribute="trailing" secondItem="5Rr-V7-77t" secondAttribute="trailing" constant="16" id="eRJ-GA-7h7"/>
                                             <constraint firstItem="xhC-bi-2uo" firstAttribute="leading" secondItem="IOE-uS-7LD" secondAttribute="leading" constant="16" id="eXy-yP-awg"/>
@@ -429,7 +429,7 @@
                             <constraint firstItem="L88-7C-JjW" firstAttribute="leading" secondItem="Jvv-xa-sHC" secondAttribute="leading" id="Xlk-rh-TKE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Meus dados" id="c09-mB-RQa">
+                    <navigationItem key="navigationItem" title="Meus dados" largeTitleDisplayMode="never" id="c09-mB-RQa">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="ONd-3S-qEX">
                             <imageReference key="image" image="ellipsis.circle" catalog="system" symbolScale="large"/>
                             <color key="tintColor" red="0.53633189199999998" green="0.69770991800000004" blue="0.32933241130000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -437,9 +437,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activeButton" destination="1r7-ME-kxL" id="CP4-3o-k4q"/>
+                        <outlet property="cellNumberTxtField" destination="bRi-OQ-vZm" id="hOp-s4-3QZ"/>
                         <outlet property="checkBaptism" destination="EZd-IW-1s6" id="jna-LE-0zH"/>
                         <outlet property="checkMember" destination="rh7-ZD-I3f" id="jgi-bZ-Sdc"/>
                         <outlet property="datePicker" destination="RHX-9O-ioM" id="eC1-fs-SZ3"/>
+                        <outlet property="emailTxtfield" destination="Ulp-I3-W6F" id="c5o-Tl-qYS"/>
                         <outlet property="nameTxtField" destination="WVb-Y3-imZ" id="aRj-bV-193"/>
                         <outlet property="sexInfoTxtField" destination="5Rr-V7-77t" id="pY8-FX-XRq"/>
                     </connections>

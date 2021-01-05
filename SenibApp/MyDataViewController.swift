@@ -7,14 +7,117 @@
 
 import UIKit
 
-class MyDataViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class MyDataViewController: UIViewController {
     
     var selectedSexInfo: String?
     var sexInfoList = ["Masculino", "Feminino"]
+    var activeTextField : UITextField? = nil
+
+    
+    @IBOutlet weak var checkMember: UIButton!
+    @IBOutlet weak var checkBaptism: UIButton!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var nameTxtField: UITextField!
+    @IBOutlet weak var sexInfoTxtField: UITextField!
+    @IBOutlet weak var activeButton: UIButton!
+
+    @IBOutlet weak var emailTxtfield: UITextField!
+    @IBOutlet weak var cellNumberTxtField: UITextField!
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(MyDataViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MyDataViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .compact
+        hideKeyboardWhenTappedAround()
+        createPickerView()
+        dismissPickerView()
+        
+        nameTxtField.delegate = self
+        sexInfoTxtField.delegate = self
+        emailTxtfield.delegate = self
+        cellNumberTxtField.delegate = self
+    }
     
     
+    @objc func keyboardWillShow(notification: NSNotification){
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {return}
+        
+        var shouldMoveViewUp = false
+        
+        if let activeTextField = activeTextField{
+            
+            let bottomOfTextField = activeTextField.convert(activeTextField.bounds, to: self.view).maxY
+            let topOfKeyboard = self.view.frame.height - keyboardSize.height
+            
+            if bottomOfTextField > topOfKeyboard{
+                shouldMoveViewUp = true
+            }
+        }
+        
+        if shouldMoveViewUp {
+            self.view.frame.origin.y = 0 - 200
+            print(keyboardSize.height)
+        }
+
+        
+
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+      // move back the root view origin to zero
+        self.view.frame.origin.y = 0
+    }
+    
+    @IBAction func tappedActive(_ sender: UIButton) {
+        if sender.titleLabel?.text == "Ativo"{
+            activeButton.setTitle("Inativo", for: .normal)
+            activeButton.setTitleColor(#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), for: .normal)
+        } else if sender.titleLabel?.text == "Inativo"{
+            activeButton.setTitle("Ativo", for: .normal)
+            activeButton.setTitleColor(#colorLiteral(red: 0.4611347914, green: 0.6798202395, blue: 0.2836196125, alpha: 1), for: .normal)
+        }
+    }
+    
+    @IBAction func tappedCheck(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+            
+        }else{
+            sender.isSelected = true
+        }
+    }
+    
+    @IBAction func tappedCheckMember(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+            
+        }else{
+            sender.isSelected = true
+        }
+    }
+}
+
+//MARK: - UITextFieldDelegate
+extension MyDataViewController: UITextFieldDelegate {
+ 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.activeTextField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.activeTextField = nil
+    }
+    
+    
+}
+
+//MARK: - PickerView
+extension MyDataViewController : UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -29,31 +132,6 @@ class MyDataViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         return sexInfoList[row]
     }
     
-    @IBOutlet weak var checkMember: UIButton!
-    @IBOutlet weak var checkBaptism: UIButton!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var nameTxtField: UITextField!
-    @IBOutlet weak var sexInfoTxtField: UITextField!
-    @IBOutlet weak var activeButton: UIButton!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        datePicker.datePickerMode = .date
-        datePicker.preferredDatePickerStyle = .compact
-        
-        
-        hideKeyboardWhenTappedAround()
-        
-        
-        createPickerView()
-        dismissPickerView()
-    }
-    
-    
-    
-    
     func createPickerView() {
         let pickerView = UIPickerView()
         pickerView.delegate = self
@@ -63,7 +141,6 @@ class MyDataViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         let button = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.action))
-        
         toolBar.setItems([button], animated: true)
         toolBar.isUserInteractionEnabled = true
         sexInfoTxtField.inputAccessoryView = toolBar
@@ -72,46 +149,8 @@ class MyDataViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         view.endEditing(true)
     }
     
-    @IBAction func tappedActive(_ sender: UIButton) {
-        if sender.titleLabel?.text == "Ativo"{
-            activeButton.setTitle("Inativo", for: .normal)
-            activeButton.setTitleColor(#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), for: .normal)
-        } else if sender.titleLabel?.text == "Inativo"{
-            activeButton.setTitle("Ativo", for: .normal)
-            activeButton.setTitleColor(#colorLiteral(red: 0.4611347914, green: 0.6798202395, blue: 0.2836196125, alpha: 1), for: .normal)
-        }
-    }
-    
-    @IBAction func tappedCheck(_ sender: UIButton) {
-        
-        
-        if sender.isSelected {
-            sender.isSelected = false
-            
-        }else{
-            sender.isSelected = true
-        }
-    }
-    
-    @IBAction func tappedCheckMember(_ sender: UIButton) {
-        
-        if sender.isSelected {
-            sender.isSelected = false
-            
-        }else{
-            sender.isSelected = true
-        }
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
 }
+//MARK: - UITextField Propertie
 extension UITextField {
     func useUnderline() -> Void {
         let border = CALayer()
